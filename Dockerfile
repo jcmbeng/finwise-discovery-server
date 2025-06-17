@@ -5,10 +5,10 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copier le fichier jar de l’application dans le conteneur
-COPY target/*.jar /app/finwise-config-server.jar
+COPY target/*.jar /app/finwise-discovery-server.jar
 
 # Exposer le port sur lequel l’application écoute
 EXPOSE 9902
 
 # Commande pour exécuter l’application Spring Boot
-ENTRYPOINT ["java", "-jar", "/app/finwise-config-server.jar"]
+ENTRYPOINT ["java", "-jar", "/app/finwise-discovery-server.jar"]
