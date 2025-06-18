@@ -1,7 +1,7 @@
 services:
-  config-server:
+  finwise:
     build: .
-    container_name: finwise-discovery-server
+    container_name: discovery-server
     ports:
       - "9902:8080"
     networks:
