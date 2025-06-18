@@ -2,4 +2,4 @@ spring:
   application:
     name: finwise-discovery-server
   config:
-    import: optional:configserver:http://localhost:9901
+    import: optional:configserver:http://host.docker.internal:9901
