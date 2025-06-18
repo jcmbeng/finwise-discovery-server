@@ -1,12 +1,12 @@
 services:
   finwise:
     build: .
-    container_name: discovery-server
-    ports:
-      - "9902:9902"
     networks:
       - finwise-network
+    container_name: discovery-server
+    ports:
+      - "9902:8080"
 
 networks:
   finwise-network:
-    driver: bridge
+    external: true
