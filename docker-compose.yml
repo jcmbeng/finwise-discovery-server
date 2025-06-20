@@ -1,0 +1,12 @@
+services:
+  finwise:
+    build: .
+    networks:
+      - finwise-network
+    container_name: discovery-server
+    ports:
+      - "9902:8080"
+
+networks:
+  finwise-network:
+    external: true
