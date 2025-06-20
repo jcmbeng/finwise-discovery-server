@@ -1,9 +1,9 @@
 name: Build and Deploy Discovery Server
 
 on:
-  push:
-    branches:
-      - develop
+#  push:
+#    branches:
+#      - develop
   workflow_dispatch:
     inputs:
       environment:
