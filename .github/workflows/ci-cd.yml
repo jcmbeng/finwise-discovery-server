@@ -8,18 +8,16 @@ on:
         required: true
         type: choice
         options:
-          - dev
-          - prod
+          - main
+          - develop
+          - production
       branch:
         description: 'Branch to build'
         required: false
-        default: 'develop'
-
-#on:
-#  push:
-#    branches: [main]
-#  pull_request:
-#    branches: [main]
+        options:
+          - main
+          - develop
+          - production
 
 jobs:
   deploy:
