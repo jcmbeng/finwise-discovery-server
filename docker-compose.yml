@@ -5,7 +5,7 @@ services:
       - finwise-network
     container_name: discovery-server
     ports:
-      - "9902:8080"
+      - "9902:8761"
 
 networks:
   finwise-network:
