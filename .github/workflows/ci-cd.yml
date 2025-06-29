@@ -69,6 +69,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} << 'EOF'
             cd ${{ secrets.REMOTE_APP_DIR }}
-            docker compose down
-            docker compose up -d
+            docker-compose down --volumes --remove-orphans
+            docker system prune -a --volumes -f
+            docker-compose up --build -d
           EOF
