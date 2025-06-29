@@ -1,0 +1,25 @@
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+    port: 8761
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+
+
+spring:
+  cloud:
+    config:
+      enabled: false
+  application:
+    name: discovery-server
